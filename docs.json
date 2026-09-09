@@ -83,11 +83,9 @@
               "advanced/deliverability",
               "advanced/multi-tenant",
               "advanced/agentid",
-              "advanced/agentid-browser-enrollment",
               "advanced/errors",
               "advanced/plans-and-usage",
-              "advanced/eu-region",
-              "advanced/google-workspace"
+              "advanced/eu-region"
             ]
           },
           {
@@ -95,8 +93,7 @@
             "pages": [
               "examples/outbound-gtm-sdr-agent",
               "examples/customer-support-agent",
-              "examples/ai-employee-with-its-own-inbox",
-              "examples/github-star-agent"
+              "examples/ai-employee-with-its-own-inbox"
             ]
           },
           {
@@ -106,12 +103,6 @@
               "extras/deliverability-fundamentals",
               "extras/security-compliance",
               "extras/account-lifecycle"
-            ]
-          },
-          {
-            "group": "Help",
-            "pages": [
-              "resources/faq"
             ]
           }
         ]
@@ -276,7 +267,7 @@
     },
     {
       "source": "/webhook-agent",
-      "destination": "/examples/github-star-agent",
+      "destination": "/examples/customer-support-agent",
       "permanent": true
     },
     {
@@ -346,7 +337,7 @@
     },
     {
       "source": "/faq",
-      "destination": "/resources/faq",
+      "destination": "/introduction",
       "permanent": true
     },
     {
@@ -381,17 +372,17 @@
     },
     {
       "source": "/asyncapi.json",
-      "destination": "/api-reference/asyncapi.json",
+      "destination": "/advanced/websockets",
       "permanent": true
     },
     {
       "source": "/asyncapi.yaml",
-      "destination": "/api-reference/asyncapi.yaml",
+      "destination": "/advanced/websockets",
       "permanent": true
     },
     {
       "source": "/knowledge-base",
-      "destination": "/resources/faq",
+      "destination": "/introduction",
       "permanent": true
     },
     {
@@ -621,7 +612,7 @@
     },
     {
       "source": "/api-reference/inboxes/search",
-      "destination": "/api-reference/inboxes/search-inboxes",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
@@ -646,7 +637,7 @@
     },
     {
       "source": "/api-reference/inboxes/threads/search",
-      "destination": "/api-reference/inboxesthreads/search-threads",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -656,7 +647,7 @@
     },
     {
       "source": "/api-reference/inboxes/threads/update",
-      "destination": "/api-reference/inboxesthreads/update-thread",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -676,7 +667,7 @@
     },
     {
       "source": "/api-reference/inboxes/messages/search",
-      "destination": "/api-reference/inboxesmessages/search-messages",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
@@ -691,17 +682,17 @@
     },
     {
       "source": "/api-reference/inboxes/messages/delete",
-      "destination": "/api-reference/inboxesmessages/delete-message",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/messages/batch-get",
-      "destination": "/api-reference/inboxesmessages/batch-get-messages",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/messages/batch-update",
-      "destination": "/api-reference/inboxesmessages/batch-update-messages",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
@@ -761,7 +752,7 @@
     },
     {
       "source": "/api-reference/inboxes/drafts/get-attachment",
-      "destination": "/api-reference/inboxesdrafts/get-attachment",
+      "destination": "/core/send",
       "permanent": true
     },
     {
@@ -771,92 +762,92 @@
     },
     {
       "source": "/api-reference/inboxes/browser-credentials/create-enrollment",
-      "destination": "/api-reference/inboxesbrowsercredentials/create-browser-enrollment",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/list",
-      "destination": "/api-reference/inboxeswebhooks/list-webhooks",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/create",
-      "destination": "/api-reference/inboxeswebhooks/create-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/get",
-      "destination": "/api-reference/inboxeswebhooks/get-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/update",
-      "destination": "/api-reference/inboxeswebhooks/update-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/delete",
-      "destination": "/api-reference/inboxeswebhooks/delete-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/get-headers",
-      "destination": "/api-reference/inboxeswebhooks/get-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/webhooks/update-headers",
-      "destination": "/api-reference/inboxeswebhooks/update-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/lists/list",
-      "destination": "/api-reference/inboxeslists/list-entries",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/lists/create",
-      "destination": "/api-reference/inboxeslists/create-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/lists/get",
-      "destination": "/api-reference/inboxeslists/get-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/lists/delete",
-      "destination": "/api-reference/inboxeslists/delete-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/metrics/query-events",
-      "destination": "/api-reference/inboxesmetrics/query-events",
+      "destination": "/api-reference/inboxesmetrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/metrics/query-usage",
-      "destination": "/api-reference/inboxesmetrics/query-usage",
+      "destination": "/api-reference/inboxesmetrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/events/list",
-      "destination": "/api-reference/inboxesevents/list-inbox-events",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/api-keys/list",
-      "destination": "/api-reference/inboxesapikeys/list-api-keys",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/api-keys/create",
-      "destination": "/api-reference/inboxesapikeys/create-api-key",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/api-keys/delete",
-      "destination": "/api-reference/inboxesapikeys/delete-api-key",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
@@ -866,7 +857,7 @@
     },
     {
       "source": "/api-reference/threads/search",
-      "destination": "/api-reference/threads/search-threads",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -876,12 +867,12 @@
     },
     {
       "source": "/api-reference/threads/update",
-      "destination": "/api-reference/threads/update-thread",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
       "source": "/api-reference/threads/delete",
-      "destination": "/api-reference/threads/delete-thread",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -921,12 +912,12 @@
     },
     {
       "source": "/api-reference/webhooks/get-headers",
-      "destination": "/api-reference/webhooks/get-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/webhooks/update-headers",
-      "destination": "/api-reference/webhooks/update-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
@@ -946,7 +937,7 @@
     },
     {
       "source": "/api-reference/domains/update",
-      "destination": "/api-reference/domains/update-domain",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
@@ -961,22 +952,22 @@
     },
     {
       "source": "/api-reference/lists/list",
-      "destination": "/api-reference/lists/list-entries",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/lists/create",
-      "destination": "/api-reference/lists/create-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/lists/get",
-      "destination": "/api-reference/lists/get-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/lists/delete",
-      "destination": "/api-reference/lists/delete-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
@@ -996,92 +987,92 @@
     },
     {
       "source": "/api-reference/api-keys/list-public-keys",
-      "destination": "/api-reference/apikeys/list-public-key-credentials",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/create-public-key",
-      "destination": "/api-reference/apikeys/register-public-key-credential",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/update-public-key-name",
-      "destination": "/api-reference/apikeys/rename-public-key-credential",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/revoke-public-key",
-      "destination": "/api-reference/apikeys/revoke-public-key-credential",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/revoke-all-agent-id-sign-in-keys",
-      "destination": "/api-reference/apikeys/revoke-all-agentid-sign-in-keys",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/list-browser-credentials",
-      "destination": "/api-reference/apikeys/list-browser-credentials",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/list-browser-credential-events",
-      "destination": "/api-reference/apikeys/list-browser-credential-events",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/delete-browser-credential",
-      "destination": "/api-reference/apikeys/delete-browser-credential",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/cancel-browser-enrollment",
-      "destination": "/api-reference/apikeys/cancel-browser-enrollment",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/list-browser-consents",
-      "destination": "/api-reference/apikeys/list-browser-consents",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/api-keys/delete-browser-consent",
-      "destination": "/api-reference/apikeys/delete-browser-consent",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/providers/list",
-      "destination": "/api-reference/providers/list-providers",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/providers/search",
-      "destination": "/api-reference/providers/search-providers",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/providers/get",
-      "destination": "/api-reference/providers/get-provider",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/providers/list-accounts",
-      "destination": "/api-reference/providers/list-provider-accounts",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/providers/connect",
-      "destination": "/api-reference/providers/connect-provider",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/accounts/list",
-      "destination": "/api-reference/accounts/list-accounts",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
       "source": "/api-reference/accounts/get",
-      "destination": "/api-reference/accounts/get-account",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
@@ -1116,7 +1107,7 @@
     },
     {
       "source": "/api-reference/pods/inboxes/search",
-      "destination": "/api-reference/podsinboxes/search-inboxes",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
@@ -1126,7 +1117,7 @@
     },
     {
       "source": "/api-reference/pods/inboxes/update",
-      "destination": "/api-reference/podsinboxes/update-inbox",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
@@ -1141,7 +1132,7 @@
     },
     {
       "source": "/api-reference/pods/threads/search",
-      "destination": "/api-reference/podsthreads/search-threads",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -1151,12 +1142,12 @@
     },
     {
       "source": "/api-reference/pods/threads/update",
-      "destination": "/api-reference/podsthreads/update-thread",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/threads/delete",
-      "destination": "/api-reference/podsthreads/delete-thread",
+      "destination": "/core/conversations",
       "permanent": true
     },
     {
@@ -1176,42 +1167,42 @@
     },
     {
       "source": "/api-reference/pods/drafts/get-attachment",
-      "destination": "/api-reference/podsdrafts/get-attachment",
+      "destination": "/core/send",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/list",
-      "destination": "/api-reference/podswebhooks/list-webhooks",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/create",
-      "destination": "/api-reference/podswebhooks/create-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/get",
-      "destination": "/api-reference/podswebhooks/get-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/update",
-      "destination": "/api-reference/podswebhooks/update-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/delete",
-      "destination": "/api-reference/podswebhooks/delete-webhook",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/get-headers",
-      "destination": "/api-reference/podswebhooks/get-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/webhooks/update-headers",
-      "destination": "/api-reference/podswebhooks/update-webhook-headers",
+      "destination": "/advanced/webhooks",
       "permanent": true
     },
     {
@@ -1226,12 +1217,12 @@
     },
     {
       "source": "/api-reference/pods/domains/get",
-      "destination": "/api-reference/podsdomains/get-domain",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/domains/update",
-      "destination": "/api-reference/podsdomains/update-domain",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
@@ -1241,57 +1232,57 @@
     },
     {
       "source": "/api-reference/pods/domains/get-zone-file",
-      "destination": "/api-reference/podsdomains/get-zone-file",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/domains/verify",
-      "destination": "/api-reference/podsdomains/verify-domain",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/lists/list",
-      "destination": "/api-reference/podslists/list-entries",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/lists/create",
-      "destination": "/api-reference/podslists/create-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/lists/get",
-      "destination": "/api-reference/podslists/get-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/lists/delete",
-      "destination": "/api-reference/podslists/delete-list-entry",
+      "destination": "/core/inbound-control",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/metrics/query-events",
-      "destination": "/api-reference/podsmetrics/query-events",
+      "destination": "/api-reference/metrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/metrics/query-usage",
-      "destination": "/api-reference/podsmetrics/query-usage",
+      "destination": "/api-reference/metrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/api-keys/list",
-      "destination": "/api-reference/podsapikeys/list-api-keys",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/api-keys/create",
-      "destination": "/api-reference/podsapikeys/create-api-key",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/api-keys/delete",
-      "destination": "/api-reference/podsapikeys/delete-api-key",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
@@ -1301,7 +1292,7 @@
     },
     {
       "source": "/api-reference/auth/me",
-      "destination": "/api-reference/auth/who-am-i",
+      "destination": "/quickstart",
       "permanent": true
     },
     {
@@ -1311,7 +1302,7 @@
     },
     {
       "source": "/agentid-browser-enrollment",
-      "destination": "/advanced/agentid-browser-enrollment",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
@@ -1361,12 +1352,12 @@
     },
     {
       "source": "/github-star-agent",
-      "destination": "/examples/github-star-agent",
+      "destination": "/examples/customer-support-agent",
       "permanent": true
     },
     {
       "source": "/google-workspace",
-      "destination": "/advanced/google-workspace",
+      "destination": "/advanced/custom-domains",
       "permanent": true
     },
     {
@@ -1446,7 +1437,7 @@
     },
     {
       "source": "/changelog/2026/9/1",
-      "destination": "/resources/changelog#september-1-2026",
+      "destination": "/resources/changelog",
       "permanent": true
     },
     {
@@ -1491,17 +1482,17 @@
     },
     {
       "source": "/api-reference/metrics/query",
-      "destination": "/api-reference/metrics/query-events",
+      "destination": "/api-reference/metrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/metrics/query",
-      "destination": "/api-reference/inboxesmetrics/query-events",
+      "destination": "/api-reference/inboxesmetrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/pods/metrics/query",
-      "destination": "/api-reference/podsmetrics/query-events",
+      "destination": "/api-reference/metrics/list-metrics",
       "permanent": true
     },
     {
@@ -1636,17 +1627,17 @@
     },
     {
       "source": "/api-reference/metrics",
-      "destination": "/api-reference/metrics/query-events",
+      "destination": "/api-reference/metrics/list-metrics",
       "permanent": true
     },
     {
       "source": "/api-reference/inboxes/api-keys",
-      "destination": "/api-reference/inboxesapikeys/list-api-keys",
+      "destination": "/advanced/multi-tenant",
       "permanent": true
     },
     {
       "source": "/api-reference/providers",
-      "destination": "/api-reference/providers/list-providers",
+      "destination": "/advanced/agentid",
       "permanent": true
     },
     {
@@ -1656,7 +1647,7 @@
     },
     {
       "source": "/api-reference/messages/delete",
-      "destination": "/api-reference/inboxesmessages/delete-message",
+      "destination": "/core/receive",
       "permanent": true
     },
     {
@@ -1736,7 +1727,7 @@
     },
     {
       "source": "/v0/inboxes/inbox_id/metrics",
-      "destination": "/api-reference/inboxesmetrics/query-events",
+      "destination": "/api-reference/inboxesmetrics/list-metrics",
       "permanent": true
     },
     {
@@ -1846,7 +1837,7 @@
     },
     {
       "source": "/v0/inboxes/:inbox_id/metrics",
-      "destination": "/api-reference/inboxesmetrics/query-events",
+      "destination": "/api-reference/inboxesmetrics/list-metrics",
       "permanent": true
     },
     {
@@ -1917,6 +1908,11 @@
     {
       "source": "/docs/:path*",
       "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/resources/faq",
+      "destination": "/introduction",
       "permanent": true
     }
   ]
