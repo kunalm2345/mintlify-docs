@@ -3910,8 +3910,14 @@
         "fern-navigation",
         "migration-redirect"
       ],
-      "legacy_urls": [],
-      "legacy_canonicals": [],
+      "legacy_urls": [
+        "https://www.agentmail.to/docs/google-workspace",
+        "https://docs.agentmail.to/google-workspace"
+      ],
+      "legacy_canonicals": [
+        "https://agentmail.to/docs/docs/google-workspace",
+        "https://agentmail.to/docs/google-workspace"
+      ],
       "expected_path": "/advanced/google-workspace",
       "expected_canonical": "https://www.agentmail.to/docs/advanced/google-workspace",
       "kind": "page"
@@ -4722,8 +4728,14 @@
         "fern-navigation",
         "migration-redirect"
       ],
-      "legacy_urls": [],
-      "legacy_canonicals": [],
+      "legacy_urls": [
+        "https://www.agentmail.to/docs/knowledge-base/open-tracking",
+        "https://docs.agentmail.to/knowledge-base/open-tracking"
+      ],
+      "legacy_canonicals": [
+        "https://agentmail.to/docs/docs/knowledge-base/open-tracking",
+        "https://agentmail.to/docs/knowledge-base/open-tracking"
+      ],
       "expected_path": "/advanced/custom-domains#domain-settings",
       "expected_canonical": "https://www.agentmail.to/docs/advanced/custom-domains",
       "kind": "page"
@@ -4810,9 +4822,15 @@
         "fern-navigation",
         "migration-redirect"
       ],
-      "legacy_urls": [],
-      "legacy_canonicals": [],
-      "expected_path": "/advanced/custom-domains#host-inboxes-on-any-subdomain",
+      "legacy_urls": [
+        "https://www.agentmail.to/docs/knowledge-base/subdomain-inboxes",
+        "https://docs.agentmail.to/knowledge-base/subdomain-inboxes"
+      ],
+      "legacy_canonicals": [
+        "https://agentmail.to/docs/docs/knowledge-base/subdomain-inboxes",
+        "https://agentmail.to/docs/knowledge-base/subdomain-inboxes"
+      ],
+      "expected_path": "/advanced/custom-domains#domain-settings",
       "expected_canonical": "https://www.agentmail.to/docs/advanced/custom-domains",
       "kind": "page"
     },
@@ -5196,6 +5214,39 @@
       "kind": "page"
     },
     {
+      "path": "/v0/domains/:domain_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/domains/get-domain",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/domains/get-domain",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/domains/:domain_id/verify",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/domains/verify-domain",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/domains/verify-domain",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/domains/:domain_id/zone-file",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/domains/get-zone-file",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/domains/get-zone-file",
+      "kind": "page"
+    },
+    {
       "path": "/v0/domains/domain_id",
       "sources": [
         "fern-redirect"
@@ -5229,6 +5280,17 @@
       "kind": "page"
     },
     {
+      "path": "/v0/drafts/:draft_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/drafts/get-draft",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/drafts/get-draft",
+      "kind": "page"
+    },
+    {
       "path": "/v0/drafts/draft_id",
       "sources": [
         "fern-redirect"
@@ -5237,6 +5299,138 @@
       "legacy_canonicals": [],
       "expected_path": "/api-reference/drafts/get-draft",
       "expected_canonical": "https://www.agentmail.to/docs/api-reference/drafts/get-draft",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxes/get-inbox",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxes/get-inbox",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/drafts",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesdrafts/get-draft",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/get-draft",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/drafts/:draft_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesdrafts/get-draft",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/get-draft",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/drafts/:draft_id/send",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesdrafts/send-draft",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/send-draft",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/messages/:message_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmessages/list-messages",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmessages/list-messages",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/messages/:message_id/attachments/:attachment_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmessages/get-attachment",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmessages/get-attachment",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/messages/:message_id/forward",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmessages/forward-message",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmessages/forward-message",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/messages/:message_id/raw",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmessages/get-raw-message",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmessages/get-raw-message",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/messages/send",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmessages/send-message",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmessages/send-message",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/metrics",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesmetrics/query-events",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesmetrics/query-events",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/threads",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesthreads/get-thread",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesthreads/get-thread",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/inboxes/:inbox_id/threads/:thread_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/inboxesthreads/list-threads",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/inboxesthreads/list-threads",
       "kind": "page"
     },
     {
@@ -5386,6 +5580,72 @@
       "kind": "page"
     },
     {
+      "path": "/v0/pods/:pod_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/pods/get-pod",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/pods/get-pod",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/pods/:pod_id/domains",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/pods/list-pods",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/pods/list-pods",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/pods/:pod_id/drafts",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/podsdrafts/list-drafts",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/podsdrafts/list-drafts",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/pods/:pod_id/drafts/:draft_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/podsdrafts/get-draft",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/podsdrafts/get-draft",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/pods/:pod_id/inboxes/:inbox_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/podsinboxes/get-inbox",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/podsinboxes/get-inbox",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/pods/:pod_id/threads",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/podsthreads/list-threads",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/podsthreads/list-threads",
+      "kind": "page"
+    },
+    {
       "path": "/v0/pods/pod_id",
       "sources": [
         "fern-redirect"
@@ -5477,6 +5737,28 @@
       "kind": "page"
     },
     {
+      "path": "/v0/threads/:thread_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/threads/get-thread",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/threads/get-thread",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/threads/:thread_id/attachments/:attachment_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/threads/get-attachment",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/threads/get-attachment",
+      "kind": "page"
+    },
+    {
       "path": "/v0/threads/thread_id",
       "sources": [
         "fern-redirect"
@@ -5508,6 +5790,17 @@
       "legacy_canonicals": [],
       "expected_path": "/advanced/webhooks",
       "expected_canonical": "https://www.agentmail.to/docs/advanced/webhooks",
+      "kind": "page"
+    },
+    {
+      "path": "/v0/webhooks/:webhook_id",
+      "sources": [
+        "fern-literal-parameter-path"
+      ],
+      "legacy_urls": [],
+      "legacy_canonicals": [],
+      "expected_path": "/api-reference/webhooks/get-webhook",
+      "expected_canonical": "https://www.agentmail.to/docs/api-reference/webhooks/get-webhook",
       "kind": "page"
     },
     {
@@ -6958,6 +7251,135 @@
     {
       "source": "/welcome",
       "destination": "https://www.agentmail.to/docs/introduction",
+      "permanent": true
+    }
+  ],
+  "fern_source_revision": "ba1d2d1",
+  "audited_on": "2026-09-09",
+  "website_parameter_redirects_required": [
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/messages/:message_id/attachments/:attachment_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmessages/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/messages/:message_id/forward",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmessages/forward-message",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/messages/:message_id/raw",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmessages/get-raw-message",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/drafts/:draft_id/send",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/send-draft",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/threads/:thread_id/attachments/:attachment_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/threads/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/messages/:message_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmessages/list-messages",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/threads/:thread_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/drafts/:draft_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id/inboxes/:inbox_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/podsinboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/messages/send",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmessages/send-message",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id/drafts/:draft_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/podsdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/domains/:domain_id/zone-file",
+      "destination": "https://www.agentmail.to/docs/api-reference/domains/get-zone-file",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/domains/:domain_id/verify",
+      "destination": "https://www.agentmail.to/docs/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/metrics",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/threads",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id/drafts",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id/domains",
+      "destination": "https://www.agentmail.to/docs/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id/threads",
+      "destination": "https://www.agentmail.to/docs/api-reference/podsthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id/drafts",
+      "destination": "https://www.agentmail.to/docs/api-reference/podsdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/webhooks/:webhook_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/webhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/threads/:thread_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/threads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/domains/:domain_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/domains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/inboxes/:inbox_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/inboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/drafts/:draft_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/drafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/docs/v0/pods/:pod_id",
+      "destination": "https://www.agentmail.to/docs/api-reference/pods/get-pod",
       "permanent": true
     }
   ]

@@ -1,0 +1,30 @@
+{
+  "audited_on": "2026-09-09",
+  "fern_source_revision": "ba1d2d1",
+  "published_fern_pages": 254,
+  "successful_fern_page_responses_across_both_hosts": 508,
+  "broken_fern_double_prefix_canonicals": 254,
+  "malformed_root_urls_in_fern_sitemap": 251,
+  "mintlify_redirect_rules": 348,
+  "inventory_cases": 357,
+  "local_url_cases": 611,
+  "local_http_checks_passed": 606,
+  "local_http_failures": 0,
+  "local_hosted_only_checks_skipped": 5,
+  "production_canonical_tags_verified": false,
+  "hosted_downloads_and_rss_verified": false,
+  "permanent_hosted_redirect_status_verified": false,
+  "external_requirements": [
+    "Configure production domain and /docs base path in Mintlify",
+    "Apply the main website proxy, domain redirects, and root robots.txt changes",
+    "Apply the 251 exact malformed-root redirects and 25 legacy parameterized redirects supplied in the inventory",
+    "Run the hosted audit against the configured deployment"
+  ],
+  "validation": [
+    "Mintlify build validation passed",
+    "Mintlify broken-link check passed",
+    "OpenAPI validation passed with 34 warnings",
+    "AsyncAPI JSON and YAML agree",
+    "PR 11 merges onto PR 10 and only removes the indexing block"
+  ]
+}

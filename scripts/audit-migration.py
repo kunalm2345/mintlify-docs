@@ -61,13 +61,20 @@ def main():
     parser.add_argument("--indexable", action="store_true", help="Expect the launch indexing block to be removed")
     parser.add_argument("--legacy-hosts", action="store_true", help="Also request original hosts and malformed root sitemap URLs; use after routing is deployed")
     parser.add_argument("--workers", type=int, default=4)
+    parser.add_argument("--only", nargs="+", help="Check only these inventory paths, for example /google-workspace")
     parser.add_argument("--output", default="/tmp/agentmail-migration-audit.json")
     args = parser.parse_args()
     fixture = Path(__file__).parent / "fixtures/fern-migration.json"
     inventory = json.loads(fixture.read_text())
+    if args.only:
+        unknown = set(args.only) - {e["path"] for e in inventory["pages"]}
+        if unknown:
+            parser.error("Paths not in the inventory: " + ", ".join(sorted(unknown)))
     prefix = args.origin.rstrip("/") + args.base_path.rstrip("/")
     jobs = {}
     for entry in inventory["pages"]:
+        if args.only and entry["path"] not in args.only:
+            continue
         paths = {entry["path"]}
         # The origin proxy removes the configured base path, leaving the
         # extra /docs segment from Fern's malformed canonical as a route.
@@ -83,8 +90,16 @@ def main():
     if args.legacy_hosts:
         by_path = {e["path"]: e for e in inventory["pages"]}
         for rule in inventory["website_redirects_required"]:
+            if args.only and rule["source"] not in args.only:
+                continue
             for host in ("https://agentmail.to", "https://www.agentmail.to"):
                 jobs[host + rule["source"]] = by_path[rule["source"]]
+        for rule in inventory.get("website_parameter_redirects_required", []):
+            source = rule["source"].removeprefix("/docs")
+            if args.only and source not in args.only:
+                continue
+            sample = re.sub(r":\w+", "migration-audit-example", rule["source"])
+            jobs[args.origin.rstrip("/") + sample] = by_path[source]
 
     def check(job):
         url, entry = job
@@ -146,9 +161,10 @@ def main():
             if len(results) % 50 == 0:
                 print(f"Checked {len(results)}/{len(jobs)} URLs", flush=True)
     failures = [r for r in results if r["errors"]]
-    report = {"mode": "local-routes-only" if args.local else "hosted", "checked": len(results), "failed": len(failures), "results": results}
+    skipped = sum("status" not in r and not r["errors"] for r in results)
+    report = {"mode": "local-routes-only" if args.local else "hosted", "cases": len(results), "checked": len(results) - skipped, "skipped": skipped, "failed": len(failures), "results": results}
     Path(args.output).write_text(json.dumps(report, indent=2) + "\n")
-    print(f"Checked {len(results)} URLs; {len(failures)} failures. Report: {args.output}")
+    print(f"Checked {len(results) - skipped} URLs; {len(failures)} failures; {skipped} hosted-only checks skipped. Report: {args.output}")
     for result in failures:
         print(result["url"], "; ".join(result["errors"]))
     if args.local:

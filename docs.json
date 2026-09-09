@@ -1376,7 +1376,7 @@
     },
     {
       "source": "/knowledge-base/subdomain-inboxes",
-      "destination": "/advanced/custom-domains#host-inboxes-on-any-subdomain",
+      "destination": "/advanced/custom-domains#domain-settings",
       "permanent": true
     },
     {
@@ -1675,18 +1675,133 @@
       "permanent": true
     },
     {
+      "source": "/v0/inboxes/inbox_id/messages/message_id/attachments/attachment_id",
+      "destination": "/api-reference/inboxesmessages/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/messages/message_id/forward",
+      "destination": "/api-reference/inboxesmessages/forward-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/messages/message_id/raw",
+      "destination": "/api-reference/inboxesmessages/get-raw-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/drafts/draft_id/send",
+      "destination": "/api-reference/inboxesdrafts/send-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/thread_id/attachments/attachment_id",
+      "destination": "/api-reference/threads/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/messages/message_id",
+      "destination": "/api-reference/inboxesmessages/list-messages",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/threads/thread_id",
+      "destination": "/api-reference/inboxesthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/drafts/draft_id",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/inboxes/inbox_id",
+      "destination": "/api-reference/podsinboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/drafts/draft_id",
+      "destination": "/api-reference/podsdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/domain_id/zone-file",
+      "destination": "/api-reference/domains/get-zone-file",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/domain_id/verify",
+      "destination": "/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/metrics",
+      "destination": "/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/threads",
+      "destination": "/api-reference/inboxesthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/drafts",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/domains",
+      "destination": "/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/threads",
+      "destination": "/api-reference/podsthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/thread_id",
+      "destination": "/api-reference/threads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/domain_id",
+      "destination": "/api-reference/domains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/drafts/draft_id",
+      "destination": "/api-reference/drafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id",
+      "destination": "/api-reference/pods/get-pod",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id/attachments/:attachment_id",
+      "destination": "/api-reference/inboxesmessages/get-attachment",
+      "permanent": true
+    },
+    {
       "source": "/v0/inboxes/:inbox_id/messages/:message_id/forward",
       "destination": "/api-reference/inboxesmessages/forward-message",
       "permanent": true
     },
     {
-      "source": "/v0/domains/:domain_id/verify",
-      "destination": "/api-reference/domains/verify-domain",
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id/raw",
+      "destination": "/api-reference/inboxesmessages/get-raw-message",
       "permanent": true
     },
     {
-      "source": "/v0/pods/:pod_id/domains",
-      "destination": "/api-reference/pods/list-pods",
+      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id/send",
+      "destination": "/api-reference/inboxesdrafts/send-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/:thread_id/attachments/:attachment_id",
+      "destination": "/api-reference/threads/get-attachment",
       "permanent": true
     },
     {
@@ -1700,53 +1815,8 @@
       "permanent": true
     },
     {
-      "source": "/v0/inboxes/:inbox_id/metrics",
-      "destination": "/api-reference/inboxesmetrics/query-events",
-      "permanent": true
-    },
-    {
-      "source": "/v0/pods/:pod_id/drafts/:draft_id",
-      "destination": "/api-reference/podsdrafts/get-draft",
-      "permanent": true
-    },
-    {
-      "source": "/v0/threads/:thread_id/attachments/:attachment_id",
-      "destination": "/api-reference/threads/get-attachment",
-      "permanent": true
-    },
-    {
-      "source": "/v0/webhooks/:webhook_id",
-      "destination": "/api-reference/webhooks/get-webhook",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id/drafts",
+      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id",
       "destination": "/api-reference/inboxesdrafts/get-draft",
-      "permanent": true
-    },
-    {
-      "source": "/v0/drafts/:draft_id",
-      "destination": "/api-reference/drafts/get-draft",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id/threads",
-      "destination": "/api-reference/inboxesthreads/get-thread",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id",
-      "destination": "/api-reference/inboxes/get-inbox",
-      "permanent": true
-    },
-    {
-      "source": "/v0/pods/:pod_id",
-      "destination": "/api-reference/pods/get-pod",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id/messages/:message_id/attachments/:attachment_id",
-      "destination": "/api-reference/inboxesmessages/get-attachment",
       "permanent": true
     },
     {
@@ -1755,38 +1825,13 @@
       "permanent": true
     },
     {
-      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id/send",
-      "destination": "/api-reference/inboxesdrafts/send-draft",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id/messages/:message_id/raw",
-      "destination": "/api-reference/inboxesmessages/get-raw-message",
-      "permanent": true
-    },
-    {
-      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id",
-      "destination": "/api-reference/inboxesdrafts/get-draft",
-      "permanent": true
-    },
-    {
-      "source": "/v0/threads/:thread_id",
-      "destination": "/api-reference/threads/get-thread",
-      "permanent": true
-    },
-    {
       "source": "/v0/inboxes/:inbox_id/messages/send",
       "destination": "/api-reference/inboxesmessages/send-message",
       "permanent": true
     },
     {
-      "source": "/v0/domains/:domain_id",
-      "destination": "/api-reference/domains/get-domain",
-      "permanent": true
-    },
-    {
-      "source": "/v0/pods/:pod_id/drafts",
-      "destination": "/api-reference/podsdrafts/list-drafts",
+      "source": "/v0/pods/:pod_id/drafts/:draft_id",
+      "destination": "/api-reference/podsdrafts/get-draft",
       "permanent": true
     },
     {
@@ -1795,13 +1840,68 @@
       "permanent": true
     },
     {
+      "source": "/v0/domains/:domain_id/verify",
+      "destination": "/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/metrics",
+      "destination": "/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/threads",
+      "destination": "/api-reference/inboxesthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/drafts",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/domains",
+      "destination": "/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
       "source": "/v0/pods/:pod_id/threads",
       "destination": "/api-reference/podsthreads/list-threads",
       "permanent": true
     },
     {
-      "source": "/docs/:path*",
-      "destination": "/:path*",
+      "source": "/v0/pods/:pod_id/drafts",
+      "destination": "/api-reference/podsdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/v0/webhooks/:webhook_id",
+      "destination": "/api-reference/webhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/:thread_id",
+      "destination": "/api-reference/threads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/:domain_id",
+      "destination": "/api-reference/domains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id",
+      "destination": "/api-reference/inboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/v0/drafts/:draft_id",
+      "destination": "/api-reference/drafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id",
+      "destination": "/api-reference/pods/get-pod",
       "permanent": true
     },
     {
@@ -1812,6 +1912,11 @@
     {
       "source": "/changelog/:slug*",
       "destination": "/resources/changelog",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "/:path*",
       "permanent": true
     }
   ]
