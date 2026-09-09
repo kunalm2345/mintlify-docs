@@ -2,11 +2,6 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
   "name": "AgentMail",
-  "seo": {
-    "metatags": {
-      "robots": "noindex, nofollow"
-    }
-  },
   "colors": {
     "primary": "#16A34A",
     "light": "#4ADE80",
@@ -83,6 +78,7 @@
               "advanced/deliverability",
               "advanced/multi-tenant",
               "advanced/agentid",
+              "advanced/agentid-browser-enrollment",
               "advanced/errors",
               "advanced/plans-and-usage",
               "advanced/eu-region"
@@ -608,6 +604,756 @@
     {
       "source": "/integrations/frameworks/grokbot",
       "destination": "/integrations/frameworks/grok",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/list",
+      "destination": "/api-reference/inboxes/list-inboxes",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/create",
+      "destination": "/api-reference/inboxes/create-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/search",
+      "destination": "/api-reference/inboxes/search-inboxes",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/get",
+      "destination": "/api-reference/inboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/update",
+      "destination": "/api-reference/inboxes/update-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/delete",
+      "destination": "/api-reference/inboxes/delete-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/list",
+      "destination": "/api-reference/inboxesthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/search",
+      "destination": "/api-reference/inboxesthreads/search-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/get",
+      "destination": "/api-reference/inboxesthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/update",
+      "destination": "/api-reference/inboxesthreads/update-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/delete",
+      "destination": "/api-reference/inboxesthreads/delete-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/threads/get-attachment",
+      "destination": "/api-reference/inboxesthreads/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/list",
+      "destination": "/api-reference/inboxesmessages/list-messages",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/search",
+      "destination": "/api-reference/inboxesmessages/search-messages",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/get",
+      "destination": "/api-reference/inboxesmessages/get-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/update",
+      "destination": "/api-reference/inboxesmessages/update-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/delete",
+      "destination": "/api-reference/inboxesmessages/delete-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/batch-get",
+      "destination": "/api-reference/inboxesmessages/batch-get-messages",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/batch-update",
+      "destination": "/api-reference/inboxesmessages/batch-update-messages",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/get-attachment",
+      "destination": "/api-reference/inboxesmessages/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/get-raw",
+      "destination": "/api-reference/inboxesmessages/get-raw-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/send",
+      "destination": "/api-reference/inboxesmessages/send-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/reply",
+      "destination": "/api-reference/inboxesmessages/reply-to-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/reply-all",
+      "destination": "/api-reference/inboxesmessages/reply-all-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/messages/forward",
+      "destination": "/api-reference/inboxesmessages/forward-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/list",
+      "destination": "/api-reference/inboxesdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/create",
+      "destination": "/api-reference/inboxesdrafts/create-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/get",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/update",
+      "destination": "/api-reference/inboxesdrafts/update-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/delete",
+      "destination": "/api-reference/inboxesdrafts/delete-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/get-attachment",
+      "destination": "/api-reference/inboxesdrafts/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/drafts/send",
+      "destination": "/api-reference/inboxesdrafts/send-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/browser-credentials/create-enrollment",
+      "destination": "/api-reference/inboxesbrowsercredentials/create-browser-enrollment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/list",
+      "destination": "/api-reference/inboxeswebhooks/list-webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/create",
+      "destination": "/api-reference/inboxeswebhooks/create-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/get",
+      "destination": "/api-reference/inboxeswebhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/update",
+      "destination": "/api-reference/inboxeswebhooks/update-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/delete",
+      "destination": "/api-reference/inboxeswebhooks/delete-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/get-headers",
+      "destination": "/api-reference/inboxeswebhooks/get-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/webhooks/update-headers",
+      "destination": "/api-reference/inboxeswebhooks/update-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/lists/list",
+      "destination": "/api-reference/inboxeslists/list-entries",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/lists/create",
+      "destination": "/api-reference/inboxeslists/create-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/lists/get",
+      "destination": "/api-reference/inboxeslists/get-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/lists/delete",
+      "destination": "/api-reference/inboxeslists/delete-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/metrics/query-events",
+      "destination": "/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/metrics/query-usage",
+      "destination": "/api-reference/inboxesmetrics/query-usage",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/events/list",
+      "destination": "/api-reference/inboxesevents/list-inbox-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/api-keys/list",
+      "destination": "/api-reference/inboxesapikeys/list-api-keys",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/api-keys/create",
+      "destination": "/api-reference/inboxesapikeys/create-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/api-keys/delete",
+      "destination": "/api-reference/inboxesapikeys/delete-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/threads/list",
+      "destination": "/api-reference/threads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/threads/search",
+      "destination": "/api-reference/threads/search-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/threads/get",
+      "destination": "/api-reference/threads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/threads/update",
+      "destination": "/api-reference/threads/update-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/threads/delete",
+      "destination": "/api-reference/threads/delete-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/drafts/list",
+      "destination": "/api-reference/drafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/drafts/get",
+      "destination": "/api-reference/drafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/list",
+      "destination": "/api-reference/webhooks/list-webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/create",
+      "destination": "/api-reference/webhooks/create-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/get",
+      "destination": "/api-reference/webhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/update",
+      "destination": "/api-reference/webhooks/update-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/delete",
+      "destination": "/api-reference/webhooks/delete-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/get-headers",
+      "destination": "/api-reference/webhooks/get-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/update-headers",
+      "destination": "/api-reference/webhooks/update-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/list",
+      "destination": "/api-reference/domains/list-domains",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/create",
+      "destination": "/api-reference/domains/create-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/get",
+      "destination": "/api-reference/domains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/update",
+      "destination": "/api-reference/domains/update-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/delete",
+      "destination": "/api-reference/domains/delete-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/domains/verify",
+      "destination": "/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/lists/list",
+      "destination": "/api-reference/lists/list-entries",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/lists/create",
+      "destination": "/api-reference/lists/create-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/lists/get",
+      "destination": "/api-reference/lists/get-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/lists/delete",
+      "destination": "/api-reference/lists/delete-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/list",
+      "destination": "/api-reference/apikeys/list-api-keys",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/create",
+      "destination": "/api-reference/apikeys/create-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/delete",
+      "destination": "/api-reference/apikeys/delete-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/list-public-keys",
+      "destination": "/api-reference/apikeys/list-public-key-credentials",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/create-public-key",
+      "destination": "/api-reference/apikeys/register-public-key-credential",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/update-public-key-name",
+      "destination": "/api-reference/apikeys/rename-public-key-credential",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/revoke-public-key",
+      "destination": "/api-reference/apikeys/revoke-public-key-credential",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/revoke-all-agent-id-sign-in-keys",
+      "destination": "/api-reference/apikeys/revoke-all-agentid-sign-in-keys",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/list-browser-credentials",
+      "destination": "/api-reference/apikeys/list-browser-credentials",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/list-browser-credential-events",
+      "destination": "/api-reference/apikeys/list-browser-credential-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/delete-browser-credential",
+      "destination": "/api-reference/apikeys/delete-browser-credential",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/cancel-browser-enrollment",
+      "destination": "/api-reference/apikeys/cancel-browser-enrollment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/list-browser-consents",
+      "destination": "/api-reference/apikeys/list-browser-consents",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/api-keys/delete-browser-consent",
+      "destination": "/api-reference/apikeys/delete-browser-consent",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers/list",
+      "destination": "/api-reference/providers/list-providers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers/search",
+      "destination": "/api-reference/providers/search-providers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers/get",
+      "destination": "/api-reference/providers/get-provider",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers/list-accounts",
+      "destination": "/api-reference/providers/list-provider-accounts",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers/connect",
+      "destination": "/api-reference/providers/connect-provider",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/accounts/list",
+      "destination": "/api-reference/accounts/list-accounts",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/accounts/get",
+      "destination": "/api-reference/accounts/get-account",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/list",
+      "destination": "/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/create",
+      "destination": "/api-reference/pods/create-pod",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/get",
+      "destination": "/api-reference/pods/get-pod",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/delete",
+      "destination": "/api-reference/pods/delete-pod",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/list",
+      "destination": "/api-reference/podsinboxes/list-inboxes",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/create",
+      "destination": "/api-reference/podsinboxes/create-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/search",
+      "destination": "/api-reference/podsinboxes/search-inboxes",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/get",
+      "destination": "/api-reference/podsinboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/update",
+      "destination": "/api-reference/podsinboxes/update-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/inboxes/delete",
+      "destination": "/api-reference/podsinboxes/delete-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/list",
+      "destination": "/api-reference/podsthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/search",
+      "destination": "/api-reference/podsthreads/search-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/get",
+      "destination": "/api-reference/podsthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/update",
+      "destination": "/api-reference/podsthreads/update-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/delete",
+      "destination": "/api-reference/podsthreads/delete-thread",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/threads/get-attachment",
+      "destination": "/api-reference/podsthreads/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/drafts/list",
+      "destination": "/api-reference/podsdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/drafts/get",
+      "destination": "/api-reference/podsdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/drafts/get-attachment",
+      "destination": "/api-reference/podsdrafts/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/list",
+      "destination": "/api-reference/podswebhooks/list-webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/create",
+      "destination": "/api-reference/podswebhooks/create-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/get",
+      "destination": "/api-reference/podswebhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/update",
+      "destination": "/api-reference/podswebhooks/update-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/delete",
+      "destination": "/api-reference/podswebhooks/delete-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/get-headers",
+      "destination": "/api-reference/podswebhooks/get-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/webhooks/update-headers",
+      "destination": "/api-reference/podswebhooks/update-webhook-headers",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/list",
+      "destination": "/api-reference/podsdomains/list-domains",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/create",
+      "destination": "/api-reference/podsdomains/create-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/get",
+      "destination": "/api-reference/podsdomains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/update",
+      "destination": "/api-reference/podsdomains/update-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/delete",
+      "destination": "/api-reference/podsdomains/delete-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/get-zone-file",
+      "destination": "/api-reference/podsdomains/get-zone-file",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/domains/verify",
+      "destination": "/api-reference/podsdomains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/lists/list",
+      "destination": "/api-reference/podslists/list-entries",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/lists/create",
+      "destination": "/api-reference/podslists/create-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/lists/get",
+      "destination": "/api-reference/podslists/get-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/lists/delete",
+      "destination": "/api-reference/podslists/delete-list-entry",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/metrics/query-events",
+      "destination": "/api-reference/podsmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/metrics/query-usage",
+      "destination": "/api-reference/podsmetrics/query-usage",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/api-keys/list",
+      "destination": "/api-reference/podsapikeys/list-api-keys",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/api-keys/create",
+      "destination": "/api-reference/podsapikeys/create-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/api-keys/delete",
+      "destination": "/api-reference/podsapikeys/delete-api-key",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/organizations/get",
+      "destination": "/api-reference/organizations/get-organization",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/auth/me",
+      "destination": "/api-reference/auth/who-am-i",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/grokbot",
+      "destination": "/integrations/frameworks/grok",
+      "permanent": true
+    },
+    {
+      "source": "/agentid-browser-enrollment",
+      "destination": "/advanced/agentid-browser-enrollment",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/websockets/websockets",
+      "destination": "/advanced/websockets",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-received",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-sent",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-delivered",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-bounced",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-complained",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-rejected",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/message-opened",
+      "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks/events/domain-verified",
+      "destination": "/advanced/webhooks#events-reference",
       "permanent": true
     }
   ]
