@@ -2,6 +2,11 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "sequoia",
   "name": "AgentMail",
+  "seo": {
+    "metatags": {
+      "robots": "noindex, nofollow"
+    }
+  },
   "colors": {
     "primary": "#16A34A",
     "light": "#4ADE80",
@@ -81,7 +86,8 @@
               "advanced/agentid-browser-enrollment",
               "advanced/errors",
               "advanced/plans-and-usage",
-              "advanced/eu-region"
+              "advanced/eu-region",
+              "advanced/google-workspace"
             ]
           },
           {
@@ -89,7 +95,8 @@
             "pages": [
               "examples/outbound-gtm-sdr-agent",
               "examples/customer-support-agent",
-              "examples/ai-employee-with-its-own-inbox"
+              "examples/ai-employee-with-its-own-inbox",
+              "examples/github-star-agent"
             ]
           },
           {
@@ -99,6 +106,12 @@
               "extras/deliverability-fundamentals",
               "extras/security-compliance",
               "extras/account-lifecycle"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "resources/faq"
             ]
           }
         ]
@@ -167,11 +180,6 @@
     ]
   },
   "redirects": [
-    {
-      "source": "/docs/:path*",
-      "destination": "/:path*",
-      "permanent": true
-    },
     {
       "source": "/errors",
       "destination": "/advanced/errors"
@@ -268,7 +276,7 @@
     },
     {
       "source": "/webhook-agent",
-      "destination": "/advanced/webhooks",
+      "destination": "/examples/github-star-agent",
       "permanent": true
     },
     {
@@ -338,7 +346,7 @@
     },
     {
       "source": "/faq",
-      "destination": "/introduction",
+      "destination": "/resources/faq",
       "permanent": true
     },
     {
@@ -373,17 +381,17 @@
     },
     {
       "source": "/asyncapi.json",
-      "destination": "/api-reference/inboxes/list-inboxes",
+      "destination": "/api-reference/asyncapi.json",
       "permanent": true
     },
     {
       "source": "/asyncapi.yaml",
-      "destination": "/api-reference/inboxes/list-inboxes",
+      "destination": "/api-reference/asyncapi.yaml",
       "permanent": true
     },
     {
       "source": "/knowledge-base",
-      "destination": "/introduction",
+      "destination": "/resources/faq",
       "permanent": true
     },
     {
@@ -584,16 +592,6 @@
     {
       "source": "/documentation/resources/security-privacy/soc-2-compliance",
       "destination": "/extras/security-compliance",
-      "permanent": true
-    },
-    {
-      "source": "/documentation/:slug*",
-      "destination": "/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/changelog/:slug*",
-      "destination": "/resources/changelog",
       "permanent": true
     },
     {
@@ -1359,6 +1357,461 @@
     {
       "source": "/api-reference/webhooks/events/domain-verified",
       "destination": "/advanced/webhooks#events-reference",
+      "permanent": true
+    },
+    {
+      "source": "/github-star-agent",
+      "destination": "/examples/github-star-agent",
+      "permanent": true
+    },
+    {
+      "source": "/google-workspace",
+      "destination": "/advanced/google-workspace",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-base/open-tracking",
+      "destination": "/advanced/custom-domains#domain-settings",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-base/subdomain-inboxes",
+      "destination": "/advanced/custom-domains#host-inboxes-on-any-subdomain",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/10/25",
+      "destination": "/resources/changelog#october-25-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/10/28",
+      "destination": "/resources/changelog#october-28-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/12/22",
+      "destination": "/resources/changelog#december-22-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/6/15",
+      "destination": "/resources/changelog#june-15-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/7/20",
+      "destination": "/resources/changelog#july-20-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2025/8/13",
+      "destination": "/resources/changelog#august-13-2025",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/3/18",
+      "destination": "/resources/changelog#march-18-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/5/28",
+      "destination": "/resources/changelog#may-28-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/6/12",
+      "destination": "/resources/changelog#june-12-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/6/25",
+      "destination": "/resources/changelog#june-25-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/6/3",
+      "destination": "/resources/changelog#june-3-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/6/8",
+      "destination": "/resources/changelog#june-8-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/7/20",
+      "destination": "/resources/changelog#july-20-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/2026/9/1",
+      "destination": "/resources/changelog#september-1-2026",
+      "permanent": true
+    },
+    {
+      "source": "/changelog.rss",
+      "destination": "/resources/changelog/rss.xml",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/moltbot",
+      "destination": "/integrations/frameworks/openclaw",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/ai-onboarding",
+      "destination": "/integrations/mcp-and-skills",
+      "permanent": true
+    },
+    {
+      "source": "/v0/webhooks/webhook_id",
+      "destination": "/advanced/webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/v0/webhooks",
+      "destination": "/advanced/webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/drafts",
+      "destination": "/api-reference/podsdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/inboxes",
+      "destination": "/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/pod_id/threads/thread_id",
+      "destination": "/api-reference/podsthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/metrics/query",
+      "destination": "/api-reference/metrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/metrics/query",
+      "destination": "/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/pods/metrics/query",
+      "destination": "/api-reference/podsmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/messages/send",
+      "destination": "/api-reference/inboxesmessages/send-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id/messages",
+      "destination": "/api-reference/inboxesmessages/list-messages",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/inbox_id",
+      "destination": "/api-reference/inboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/documentation/resources/support",
+      "destination": "/introduction#support",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/smithery",
+      "destination": "/integrations/mcp-and-skills",
+      "permanent": true
+    },
+    {
+      "source": "/core-concepts/drafts",
+      "destination": "/core/send",
+      "permanent": true
+    },
+    {
+      "source": "/webhooks",
+      "destination": "/advanced/webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/crewai",
+      "destination": "/integrations/mcp-and-skills",
+      "permanent": true
+    },
+    {
+      "source": "/api-keys",
+      "destination": "/api-reference/apikeys/list-api-keys",
+      "permanent": true
+    },
+    {
+      "source": "/verify",
+      "destination": "/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/deliverability",
+      "destination": "/advanced/deliverability",
+      "permanent": true
+    },
+    {
+      "source": "/reply-all",
+      "destination": "/api-reference/inboxesmessages/reply-all-message",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/overview",
+      "destination": "/integrations/mcp-and-skills",
+      "permanent": true
+    },
+    {
+      "source": "/pods",
+      "destination": "/advanced/multi-tenant",
+      "permanent": true
+    },
+    {
+      "source": "/domains",
+      "destination": "/advanced/custom-domains",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices/email-deliverability",
+      "destination": "/advanced/deliverability",
+      "permanent": true
+    },
+    {
+      "source": "/overview",
+      "destination": "/advanced/webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/webhook/agentmail",
+      "destination": "/advanced/webhooks#verify-the-signature-on-every-delivery",
+      "permanent": true
+    },
+    {
+      "source": "/get-started/quickstart",
+      "destination": "/quickstart",
+      "permanent": true
+    },
+    {
+      "source": "/pods/",
+      "destination": "/advanced/multi-tenant",
+      "permanent": true
+    },
+    {
+      "source": "/integrations/agent-onboarding",
+      "destination": "/integrations/mcp-and-skills",
+      "permanent": true
+    },
+    {
+      "source": "/examples/auto-reply-agent",
+      "destination": "/examples/customer-support-agent",
+      "permanent": true
+    },
+    {
+      "source": "/guides/domains/custom-domains",
+      "destination": "/advanced/custom-domains",
+      "permanent": true
+    },
+    {
+      "source": "/guides/domains/managing-domains",
+      "destination": "/advanced/custom-domains",
+      "permanent": true
+    },
+    {
+      "source": "/webhooks/webhooks-overview",
+      "destination": "/advanced/webhooks",
+      "permanent": true
+    },
+    {
+      "source": "/core-concepts/pods",
+      "destination": "/advanced/multi-tenant",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/metrics",
+      "destination": "/api-reference/metrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/inboxes/api-keys",
+      "destination": "/api-reference/inboxesapikeys/list-api-keys",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/providers",
+      "destination": "/api-reference/providers/list-providers",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-base/warming-up-your-inbox",
+      "destination": "/advanced/deliverability",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/messages/delete",
+      "destination": "/api-reference/inboxesmessages/delete-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/messages/get",
+      "destination": "/api-reference/inboxesmessages/get-message",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/websockets",
+      "destination": "/advanced/websockets",
+      "permanent": true
+    },
+    {
+      "source": "/core-concepts/permissions",
+      "destination": "/architecture",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id/forward",
+      "destination": "/api-reference/inboxesmessages/forward-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/:domain_id/verify",
+      "destination": "/api-reference/domains/verify-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/domains",
+      "destination": "/api-reference/pods/list-pods",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id",
+      "destination": "/api-reference/inboxesmessages/list-messages",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/threads/:thread_id",
+      "destination": "/api-reference/inboxesthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/metrics",
+      "destination": "/api-reference/inboxesmetrics/query-events",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/drafts/:draft_id",
+      "destination": "/api-reference/podsdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/:thread_id/attachments/:attachment_id",
+      "destination": "/api-reference/threads/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/v0/webhooks/:webhook_id",
+      "destination": "/api-reference/webhooks/get-webhook",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/drafts",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/drafts/:draft_id",
+      "destination": "/api-reference/drafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/threads",
+      "destination": "/api-reference/inboxesthreads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id",
+      "destination": "/api-reference/inboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id",
+      "destination": "/api-reference/pods/get-pod",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id/attachments/:attachment_id",
+      "destination": "/api-reference/inboxesmessages/get-attachment",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/inboxes/:inbox_id",
+      "destination": "/api-reference/podsinboxes/get-inbox",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id/send",
+      "destination": "/api-reference/inboxesdrafts/send-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/:message_id/raw",
+      "destination": "/api-reference/inboxesmessages/get-raw-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/drafts/:draft_id",
+      "destination": "/api-reference/inboxesdrafts/get-draft",
+      "permanent": true
+    },
+    {
+      "source": "/v0/threads/:thread_id",
+      "destination": "/api-reference/threads/get-thread",
+      "permanent": true
+    },
+    {
+      "source": "/v0/inboxes/:inbox_id/messages/send",
+      "destination": "/api-reference/inboxesmessages/send-message",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/:domain_id",
+      "destination": "/api-reference/domains/get-domain",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/drafts",
+      "destination": "/api-reference/podsdrafts/list-drafts",
+      "permanent": true
+    },
+    {
+      "source": "/v0/domains/:domain_id/zone-file",
+      "destination": "/api-reference/domains/get-zone-file",
+      "permanent": true
+    },
+    {
+      "source": "/v0/pods/:pod_id/threads",
+      "destination": "/api-reference/podsthreads/list-threads",
+      "permanent": true
+    },
+    {
+      "source": "/docs/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/documentation/:slug*",
+      "destination": "/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/changelog/:slug*",
+      "destination": "/resources/changelog",
       "permanent": true
     }
   ]
