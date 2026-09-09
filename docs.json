@@ -168,6 +168,11 @@
   },
   "redirects": [
     {
+      "source": "/docs/:path*",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
       "source": "/errors",
       "destination": "/advanced/errors"
     },
